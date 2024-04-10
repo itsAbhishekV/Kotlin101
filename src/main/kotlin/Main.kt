@@ -1,17 +1,41 @@
-fun main() {
-    val myRect = Rectangle(4.0, 9.0)
-    val area = myRect.area()
-    val parameter = myRect.parameter()
-    println("The area of rectangle with ${myRect.height} height and ${myRect.width} width is $area")
-    println("The parameter of rectangle with ${myRect.height} height and ${myRect.width} width is $parameter")
-
-    val myCircle = Circle(10.0)
-    val myCircle2 = Circle(20.0)
-
-    val myTriangle = Triangle(10, 20, 30)
-    println("The perimeter of the Triangle is ${myTriangle.perimeter()}")
-
+open class Animal(val name: String) {
+    open fun makeSound() {
+        println("Generic animal sound")
+    }
 }
+
+class Dog(name: String) : Animal(name) {
+    override fun makeSound() {
+        println("Woof!")
+    }
+}
+
+fun main() {
+    val dog = Dog("Buddy")
+    dog.makeSound() // Output: Woof!
+}
+
+
+//fun main() {
+//    val circle = Circle(10.0)
+//    circle.changeName("AbhishekCircle")
+//
+//}
+
+//fun main() {
+//    val myRect = Rectangle(4.0, 9.0)
+//    val area = myRect.area()
+//    val parameter = myRect.parameter()
+//    println("The area of rectangle with ${myRect.height} height and ${myRect.width} width is $area")
+//    println("The parameter of rectangle with ${myRect.height} height and ${myRect.width} width is $parameter")
+//
+//    val myCircle = Circle(10.0)
+//    val myCircle2 = Circle(20.0)
+//
+//    val myTriangle = Triangle(10, 20, 30)
+//    println("The perimeter of the Triangle is ${myTriangle.perimeter()}")
+//
+//}
 
 //fun main() {
 //    val list = listOf(1, 2, 3, 4, 5, 6)
